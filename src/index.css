@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #3a3939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #e8bcb9;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-outline: #af8785;
+  --color-outline-variant: #5e3f3d;
+  --color-surface-tint: #ffb3af;
+  --color-primary: #ffb3af;
+  --color-on-primary: #68000e;
+  --color-primary-container: #ff5356;
+  --color-on-primary-container: #5c000b;
+  --color-inverse-primary: #bf0023;
+  --color-secondary: #c8c6c5;
+  --color-on-secondary: #313030;
+  --color-secondary-container: #474746;
+  --color-on-secondary-container: #b7b5b4;
+  --color-tertiary: #c8c6c6;
+  --color-on-tertiary: #303030;
+  --color-tertiary-container: #929090;
+  --color-on-tertiary-container: #2a2a2a;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #ffdad8;
+  --color-primary-fixed-dim: #ffb3af;
+  --color-on-primary-fixed: #410006;
+  --color-on-primary-fixed-variant: #930018;
+  --color-secondary-fixed: #e5e2e1;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-tertiary-fixed: #e4e2e1;
+  --color-tertiary-fixed-dim: #c8c6c6;
+  --color-on-tertiary-fixed: #1b1c1c;
+  --color-on-tertiary-fixed-variant: #474747;
+  --color-background: #131313;
+  --color-on-background: #e5e2e1;
+  --color-surface-variant: #353534;
+
+  --font-body-md: "Be Vietnam Pro", sans-serif;
+  --font-headline-xl: "Epilogue", sans-serif;
+  --font-headline-lg: "Epilogue", sans-serif;
+  --font-headline-md: "Epilogue", sans-serif;
+  --font-label-lg: "Be Vietnam Pro", sans-serif;
+  --font-label-sm: "Be Vietnam Pro", sans-serif;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body-md);
+  min-height: max(884px, 100dvh);
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@utility px-edge_margin {
+  padding-left: max(env(safe-area-inset-left, 16px), 16px);
+  padding-right: max(env(safe-area-inset-right, 16px), 16px);
+}
+
+@utility p-edge_margin {
+  padding: max(env(safe-area-inset-top, 16px), 16px) max(env(safe-area-inset-right, 16px), 16px) max(env(safe-area-inset-bottom, 16px), 16px) max(env(safe-area-inset-left, 16px), 16px);
+}
+
+@utility right-edge_margin {
+  right: max(env(safe-area-inset-right, 16px), 16px);
+}
+
+@utility left-edge_margin {
+  left: max(env(safe-area-inset-left, 16px), 16px);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0.5rem);
+}
+
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.range-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.range-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #ff5356;
+  box-shadow: 0 0 8px rgba(255, 83, 86, 0.8);
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+.range-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #ff5356;
+  box-shadow: 0 0 8px rgba(255, 83, 86, 0.8);
+  border: none;
+  cursor: pointer;
+}

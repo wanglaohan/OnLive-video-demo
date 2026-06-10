@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "port": 3000,
+    "host": "192.168.31.52"
+  },
+  "build": {
+    "outputDir": "dist",
+    "htmlEntry": "index.html"
+  }
+}
